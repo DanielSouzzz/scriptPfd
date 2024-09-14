@@ -9,7 +9,7 @@ public class AddScriptPDF {
     public void writerScript (String inputPdf, String outputPdf, String jsCode) throws IOException {
         PdfDocument pdfDocument = new PdfDocument(new PdfReader(inputPdf), new PdfWriter(outputPdf));
 
-        //String jsCode = String.format("app.launchURL('%s', true);", url.replace("\\", "\\\\").replace("'", "\\'"));
+        //String jsCode = String.format("app.launchURL('%s', true);
 
         pdfDocument.getCatalog().setOpenAction(PdfAction.createJavaScript(jsCode));
         pdfDocument.close();
