@@ -11,8 +11,11 @@ public class UserPrompt {
             System.out.println("Please enter a name for the file: ");
             String outputFile = scanner.nextLine();
 
+            System.out.println("Please type the script in javascript: ");
+            String script = scanner.nextLine();
+
             scanner.close();
 
-            return new String[]{filePath, outputFile};
+            return new String[]{filePath, outputFile, script};
     }
 }

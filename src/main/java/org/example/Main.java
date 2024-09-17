@@ -9,10 +9,11 @@ public class Main {
 
         String filePath = result[0];
         String fileName = result[1];
+        String script = result[2];
         try {
             String inputPdf = filePath;
             String outputPdf = fileName;
-            String jsCode = "app.alert('You fell for Mario gamers prank!')";
+            String jsCode = script;
             addSc.writerScript(inputPdf, outputPdf,jsCode);
         } catch (Exception e) {
             e.printStackTrace();
